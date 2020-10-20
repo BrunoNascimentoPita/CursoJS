@@ -1,132 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width= , initial-scale=1.0">
-  <title>Have a lot of time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     * {
-      padding: 0;
-      margin: 0;
-    }
-
-    A {
-      text-decoration: none;
+      box-sizing: border-box;
     }
 
     body {
-      background-color: black;
+      margin: 0;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
-    #box {
-      background-color: rgb(191, 250, 83);
-      font: normal 20pt Arial;
-      width: 100%;
-      height: 10%;
-      color: white;
-      line-height: 50px;
+    .topnav {
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #000000;
       text-align: center;
-      animation-name: example;
-  animation-duration: 8s;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 15pt;
+
     }
 
-    #box1 {
-      background-color: rgb(47, 47, 173);
-      font: normal 20pt Arial;
-      width: 100%;
-      height: 10%;
-      color: white;
-      line-height: 50px;
-      text-align:center ;
-      
+    .topnav a:hover {
+      background-color: rgb(175, 175, 175);
+      color: rgb(0, 0, 0);
     }
 
-    #box2 {
-      background-color: rgb(248, 145, 234);
-      font: normal 20pt Arial;
-      width: 100%;
-      height: 10%;
-      color: white;
-      line-height: 50px;
-      text-align: center;
+    .topnav a.active {
+      background-color: rgb(255, 255, 255);
+      color: rgb(24, 34, 34);
     }
 
-    #box3 {
-      background-color: rgb(0, 0, 0);
-      font: normal 10pt Arial;
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 650px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 650px) {
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 10pt;
+
+    }
+
+    .logo {
+
+      left: 5%;
+      flex: 25%;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .banner {
+
+      flex: 25%;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .banner2 {
+
+      flex: 25%;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .direitos-autorais-da-WEGE {
+      flex: 25%;
+      width: 100%;
+      justify-content: center;
+    }
+
+    @media (max-width: 668px) {
+
+      .logo,
+      .banner,
+      .banner2,
+      .direitos-autorais-da-WEGE {
+        flex: 100%;
+      }
+    }
+
+    footer {
+
+      background: black;
       width: 100%;
       height: 10%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 100%;
       color: white;
-      line-height: 200px;
-      text-align: center;
-      
     }
-    @keyframes example {
-  15%   {background-color: red;}
-  35%  {background-color: yellow;}
-  65% {background-color: green;}
-  95%  {background-color: blue;}
- 
-}
   </style>
 </head>
 
 <body>
-  <a href='https://www.google.com'>
-    <div id="box" onclick="clicar()"><img widht="100%" height="100px"src="img/google.png">
+
+  <div class="topnav" id="meumenu">
+    <a href="#home" class="active">Inicio</a>
+    <a href="#news">Redes sociais</a>
+    <a href="#contact">Sobre nós</a>
+    <a href="#about">Blog</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <center>
+    <div class="container">
+      <div class="logo"><img src="img/logo.png" alt="logotipo da WEGE"></div>
+      <div class="banner"><img src="img/banner.png" alt="ilustração de propaganda"></div>
+      <div class="banner2"><img src="img/banner1.png" alt="ilustração de propaganda 2"></div>
+      <div class="direitos-autorais-da-WEGE"></div>
+
     </div>
-  </a>
-  <br>
-  <a href='https://fb.com'>
-    <div id="box1"><img widht="100%" height="100px" src="img/facebook.png"></div>
-  </a>
-  <br>
-  <a href='https://instagram.com'>
-    <div id="box2"><img widht="100%" height="100px" src="img/instagram.png"></div>
-  </a>
-  <br>
-  <div id="box3"><strong> Marca, todos os direitos reservados.</strong></div>
+  </center>
+  <section></section>
   <script>
+    function myFunction() {
+      var menuabrir = document.getElementById("meumenu");
+      if (menuabrir.className === "topnav") {
+        menuabrir.className += " responsive";
+      } else {
+        menuabrir.className = "topnav";
 
-    var caixa = document.getElementById('box')
-    var caixa1 = document.getElementById('box1')
-    var caixa2 = document.getElementById('box2')
-    //caixa0
-    caixa.addEventListener('mouseenter', entrarmouse)
-    caixa.addEventListener('mouseout', mousesair)
-    //caixa01
-    caixa1.addEventListener('mouseenter', entrarmouse1)
-    caixa1.addEventListener('mouseout', mousesair1)
-    //caixa02
-    caixa2.addEventListener('mouseenter', entrarmouse2)
-    caixa2.addEventListener('mouseout', mousesair2)
-    function entrarmouse() {
-
-      caixa.style.backgroundColor = 'rgb(156, 156, 211)';
-    }
-    function mousesair() {
-
-      caixa.style.backgroundColor = 'rgb(171, 221, 77)';
+      }
     }
 
-    function entrarmouse1() {
-
-      caixa1.style.backgroundColor = ' rgb(156, 156, 211)';
-    }
-    function mousesair1() {
-
-      caixa1.style.backgroundColor = 'rgb(47, 47, 173)';
-    }
-    function entrarmouse2() {
-
-      caixa2.style.backgroundColor = ' rgb(156, 156, 211)';
-    }
-    function mousesair2() {
-
-      caixa2.style.backgroundColor = 'rgb(243, 164, 232)';
-    }
   </script>
+
+  <center>
+    <footer><br>© Wege, 2020 Todos os direitos reservados.</footer>
+  </center>
 </body>
 
 </html>
