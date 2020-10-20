@@ -78,33 +78,33 @@
       display: flex;
       flex-wrap: wrap;
       font-size: 10pt;
-
+      
     }
 
     .logo {
-
-      left: 5%;
-      flex: 20%;
+      
+      left:5%;
+      flex: 25%;
       width: 100%;
       justify-content: center;
     }
 
     .banner {
-
-      flex: 20%;
+     
+      flex: 25%;
       width: 100%;
       justify-content: center;
     }
 
     .banner2 {
-
-      flex: 20%;
+      
+      flex: 25%;
       width: 100%;
       justify-content: center;
     }
 
     .direitos-autorais-da-WEGE {
-      flex: 20%;
+      flex: 25%;
       width: 100%;
       justify-content: center;
     }
@@ -114,28 +114,17 @@
       .logo,
       .banner,
       .banner2,
-      .direitos-autorais-da-WEGE,footer {
+      .direitos-autorais-da-WEGE {
         flex: 100%;
       }
     }
-
-    footer {
-flex:20%;
-    position: fixed;
-      width: 100%;
-      height: 10%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      top: 100%;
-      color: black;
-    }
+    
   </style>
 </head>
 
 <body>
 
-  <div class="topnav" id="meumenu">
+ <div class="topnav" id="meumenu">
     <a href="#home" class="active">Inicio</a>
     <a href="#news">Redes sociais</a>
     <a href="#contact">Sobre nós</a>
@@ -144,16 +133,16 @@ flex:20%;
       <i class="fa fa-bars"></i>
     </a>
   </div>
-  <center>
-    <div class="container">
-      <div class="logo"><img src="img/logo.png" alt="logotipo da WEGE"></div>
-      <div class="banner"><img src="img/banner.png" alt="ilustração de propaganda"></div>
-      <div class="banner2"><img src="img/banner1.png" alt="ilustração de propaganda 2"></div>
-      <div class="direitos-autorais-da-WEGE"></div>
-
+ <center>
+  <div class="container">
+    <div class="logo"><img src="img/logo.png" alt="logotipo da WEGE"></div>
+    <div class="banner"><img src="img/banner.png" alt="ilustração de propaganda"></div>
+    <div class="banner2"><img src="img/banner1.png" alt="ilustração de propaganda 2"></div>
+    <div class="direitos-autorais-da-WEGE"></div>
+    
     </div>
   </center>
-  <section></section>
+<section></section>
   <script>
     function myFunction() {
       var menuabrir = document.getElementById("meumenu");
@@ -161,15 +150,12 @@ flex:20%;
         menuabrir.className += " responsive";
       } else {
         menuabrir.className = "topnav";
-
+        
       }
     }
-
+    
   </script>
-
-  <center>
-    <footer><br>© Wege, 2020 Todos os direitos reservados.</footer>
-  </center>
+<center><footer>© Wege, 2020 Todos os direitos reservados.</footer></center>
 </body>
 
 </html>
