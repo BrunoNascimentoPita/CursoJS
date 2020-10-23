@@ -1,83 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <style>
     * {
-      box-sizing: border-box;
-    }
+  margin: 0;
+  padding: 0;
+}
 
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      font-size: 30px;
-      text-align: center;
-    }
+#nav {
+  width: 100%;
+  background: #000;
+  height: 65px;
+}
 
-    .item-flex1 {
-      background-color: black;
-      padding: 10px;
-      flex: 20%;
-      color: white;
-    }
+#nav ul {
+  width: 500px;
+  margin: 0 auto;
+  list-style: none;
+}
 
-    .item-flex2 {
-      background-color: blue;
-      padding: 10px;
-      flex: 20%;
-      color: white;
-    }
+#nav ul li {
+  color: #fff;
+  float: left;
+  line-height: 65px;
+  width: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: arial;
+  cursor: pointer;
+  text-align: center;
+}
 
-    .item-flex3 {
-      background-color: green;
-      padding: 10px;
-      flex: 20%;
-      color: white;
-    }
+#nav ul li:hover {
+  background: #00bfb6;
+}
 
-    .item-flex4 {
-      background-color: pink;
-      padding: 10px;
-      flex: 20%;
-      color: white;
-    }
 
-    .inicio {
-      background-color: grey;
-      padding: 10px;
-      flex: 20%;
-      color: white;
-    }
+/* mobile navigation bar*/
 
-    /* Responsive layout - makes a one column-layout instead of a two-column layout */
-    @media (max-width: 768px) {
+.mobile_nav {
+  background: #000;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  display: none;
+  transition: all 0.5s;
+}
 
-      .item-flex2,
-      .item-flex1,
-      .item-flex3,
-      .item-flex4,
-      .inicio {
-        flex: 100%;
-      }
-    }
+.active {
+  left: 0;
+  transition: all 0.5s;
+}
+
+.mobile_nav ul {
+  padding: 50px 0px;
+  transition: all 0.5s;
+}
+
+.mobile_nav li {
+  color: #fff;
+  text-align: center;
+  margin: 20px 0px;
+  text-transform: uppercase;
+  font-family: arial;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button1 {
+  background: #bb0000;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  cursor: pointer;
+  border: 0px;
+  outline: none;
+}
+
+.button1 span {
+  background: #fff;
+  width: 50px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 15px;
+}
+
+.button1 span:before {
+  content: '';
+  background: #fff;
+  width: 50px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  top: -12px;
+}
+
+.button1 span:after {
+  content: '';
+  background: #fff;
+  width: 50px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  top: 12px;
+}
+
+.button1.btn span {
+  background: transparent;
+  transition: all 0.5s;
+}
+
+.button1.btn span:before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: all 0.5s;
+}
+
+.button1.btn span:after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: all 0.5s;
+}
+
+
+/* media queries */
+
+@media all and (min-width: 0px) and (max-width: 1250px) {
+  #nav {
+    display: none;
+  }
+  .mobile_nav {
+    display: block;
+  }
+}
   </style>
 </head>
-
 <body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<div id="nav">
+  <ul>
+    <li>Home</li>
+    <li>Profile</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</div>
 
-  <div class="flex-container">
-    <div class="inicio">HOME</div>
-    <div class="item-flex4">ARTS</div>
-    <div class="item-flex3">CONTACT</div>
-    <div class="item-flex2">ABOUT US</div>
-    <div class="item-flex1">IT IS</div>
+<div class="mobile_nav">
+  <ul>
+    <li>home</li>
+    <li>profile</li>
+    <li>about</li>
+    <li>contact</li>
+  </ul>
 
+  <div class="button1" id="hello">
+    <span></span>
   </div>
+</div>
 </body>
+<script>$(document).ready(function() {
+  $(".button1").click(function() {
+    $(".mobile_nav").toggleClass("active");
+    $(".button1").toggleClass("btn");
+  });
+});
 
+/* Fell free to visit my youtube channel for more updates,
+https://www.youtube.com/channel/UCtVM2RthR4aC6o7dzySmExA
+*/</script>
 </html>
