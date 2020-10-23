@@ -1,187 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Dicas for LoL</title>
   <style>
     * {
-  margin: 0;
-  padding: 0;
-}
+      margin: 0;
+      padding: 0;
+    }
 
-#nav {
-  width: 100%;
-  background: #000;
-  height: 65px;
+    #nav {
+      width: 100%;
+      position:fixed;
+      height: 65px;
+      background: url('img/mata.png'); 
+    }
 
-}
+    #nav ul {
+      width: 1000px;
+      margin: 0 auto;
+      list-style: none;
+    }
 
-#nav ul {
-  width: 500px;
-  margin: 0 auto;
-  list-style: none;
-}
+    #nav ul li {
+      color: rgb(156, 199, 0);
+      float: left;
+      line-height: 65px;
+      width: 200px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-family: Gill Sans, sans-serif 5pt;
+      cursor: pointer;
+      text-align: center;
+    }
 
-#nav ul li {
-  color: #fff;
-  float: left;
-  line-height: 65px;
-  width: 100px;
-  font-weight: 900;
-  text-transform: uppercase;
-  font-family: arial 5pt;
-  cursor: pointer;
-  text-align: center;
-}
-
-#nav ul li:hover {
-  background: #ffffff;
-  color:black;
-}
-
-
-/* mobile navigation bar*/
-
-.mobile_nav {
-  background: #000;
-  width: 250px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: -250px;
-  display: none;
-  transition: all 0.5s;
-}
-
-.active {
-  left: 0;
-  transition: all 0.5s;
-}
-
-.mobile_nav ul {
-  padding: 50px 0px;
-  transition: all 0.5s;
-}
-
-.mobile_nav li {
-  color: #fff;
-  text-align: center;
-  margin: 20px 0px;
-  text-transform: uppercase;
-  font-family: arial;
-  font-weight: 900;
-  cursor: pointer;
-  transition: all 0.5s;
-}
-.mobile_nav ul li:hover{
-background-color: rgb(224, 153, 60);
-}
-
-.button1 {
-  background: #000000;
-  width: 60px;
-  height: 55px;
-  position: absolute;
-  top: 0;
-  left: 250px;
-  cursor: pointer;
-  border: 0px;
-  outline: none;
-}
-
-.button1 span {
-  background: #fff;
-  width:30px;
-  height: 5px;
-  display: block;
-  position: absolute;
-  top: 45%;
-  left: 15px;
-}
-
-.button1 span:before {
-  content: '';
-  background: #fff;
-  width: 30px;
-  height: 5px;
-  display: block;
-  position: absolute;
-  top: -12px;
-}
-
-.button1 span:after {
-  content: '';
-  background: #fff;
-  width: 30px;
-  height: 5px;
-  display: block;
-  position: absolute;
-  top: 12px;
-}
-
-.button1.btn span {
-  background: transparent;
-  transition: all 0.5s;
-}
-
-.button1.btn span:before {
-  transform: rotate(45deg);
-  top: 0;
-  transition: all 0.5s;
-}
-
-.button1.btn span:after {
-  transform: rotate(-45deg);
-  top: 0;
-  transition: all 0.5s;
-}
+    #nav ul li:hover {
+      background: rgb(60, 151, 0);
+      color: rgb(1, 70, 1);
+     padding:10px;
+    }
 
 
-/* media queries */
+    /* mobile navigation bar*/
 
-@media all and (min-width: 0px) and (max-width: 1250px) {
-  #nav {
-    display: none;
-  }
-  .mobile_nav {
-    display: block;
-  }
-}
+    .mobile_nav {
+      
+      background: url('img/matamobile.png'); 
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      display: none;
+      transition: all 0.5s;
+    }
+
+    .active {
+      left: 0;
+      transition: all 0.5s;
+    }
+
+    .mobile_nav ul {
+      padding: 50px 0px;
+      transition: all 0.5s;
+    }
+
+    .mobile_nav li {
+      color: rgb(156, 199, 0);
+      text-align: center;
+      margin: 20px 0px;
+      text-transform: uppercase;
+      font-family: beaut for lol;
+      font-weight: 900;
+      cursor:none;
+      transition: all 0.5s;
+    }
+
+    .mobile_nav ul li:hover {
+      background-color: rgb(60, 151, 0);
+      color: rgb(1, 70, 1);
+    }
+
+    .button1 {
+      background: rgb(0, 14, 0);
+      width: 60px;
+      height: 55px;
+      position: absolute;
+      top: 0;
+      left: 250px;
+      cursor: pointer;
+      border: 0px;
+      outline: none;
+    }
+
+    .button1 span {
+      background: rgb(167, 185, 0);
+      width: 30px;
+      height: 5px;
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 15px;
+    }
+
+    .button1 span:before {
+      content: '';
+      background: rgb(167, 185, 0);
+      width: 30px;
+      height: 5px;
+      display: block;
+      position: absolute;
+      top: -12px;
+    }
+
+    .button1 span:after {
+      content: '';
+      background: rgb(167, 185, 0);
+      width: 30px;
+      height: 5px;
+      display: block;
+      position: absolute;
+      top: 12px;
+    }
+
+    .button1.btn span {
+      background: transparent;
+      transition: all 0.5s;
+    }
+
+    .button1.btn span:before {
+      transform: rotate(45deg);
+      top: 0;
+      transition: all 0.5s;
+    }
+
+    .button1.btn span:after {
+      transform: rotate(-45deg);
+      top: 0;
+      transition: all 0.5s;
+    }
+
+    body {
+      background-color: rgb(0, 14, 0);
+    }
+
+    /* media queries */
+
+    @media all and (min-width: 0px) and (max-width: 1250px) {
+      #nav {
+        display: none;
+      }
+
+      .mobile_nav {
+        display: block;
+      }
+    }
+
+     
+
   </style>
 </head>
+
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<div id="nav">
-  <ul>
-    <li>Edge</li>
-    <li>Store</li>
-    <li>About us</li>
-    <li>Contact</li>
-  </ul>
-</div>
-
-<div class="mobile_nav">
-  <ul>
-    <li>Edge</li>
-    <li>Store</li>
-    <li>About us</li>
-    <li>Contact</li>
-  </ul>
-
-  <div class="button1" id="hello">
-    <span></span>
+  <div id="nav">
+    <ul>
+      <li>Inicio</li>
+      <li>Dicas sobre as rotas</li>
+      <li>Sobre mim</li>
+      <li>Contato</li>
+    </ul>
   </div>
-</div>
+
+  <div class="mobile_nav">
+    <ul>
+      <li>Inicio</li>
+      <li>Dicas sobre as rotas</li>
+      <li>Sobre mim</li>
+      <li>Contato</li>
+    </ul>
+
+    <div class="button1" id="hello">
+      <span></span>
+    </div>
+  </div>
 </body>
-<script>$(document).ready(function() {
-  $(".button1").click(function() {
-    $(".mobile_nav").toggleClass("active");
-    $(".button1").toggleClass("btn");
+<script>$(document).ready(function () {
+    $(".button1").click(function () {
+      $(".mobile_nav").toggleClass("active");
+      $(".button1").toggleClass("btn");
+    });
   });
-});
 
 
 </script>
+
 </html>
